@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    font-family: 'Pixelify Sans', sans-serif;
+    background: linear-gradient(320deg, #ffe74c, #ff5694, #1f618d);
+}
+
+.calculator {
+    border: 1px solid rgba(225, 225, 225, 0.01);
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(225, 225, 225, 0.30);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 28px 38px;
+}
+
+.operands {
+    backdrop-filter: blur(5.5px);
+    background: rgba(225, 225, 225, 0.75);
+    padding: 12px;
+    border: 1px solid rgba(225, 225, 225, 0.01);
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    text-align: right;
+    font-size: 2rem;
+    overflow: auto;
+}
+
+[data-operand-1] {
+    font-size: 1.5rem;
+    opacity: 65%;
+}
+
+.bttn-grid {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 14px;
+}
+
+button {
+    padding: 12px;
+    border: 0;
+    border-radius: 14px;
+    backdrop-filter: blur(5.5px);
+    background: rgba(225, 225, 225, 0.75);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    font-family: inherit;
+    font-size: 2rem;
+}
+
+button:nth-child(2) {
+    grid-column: span 2;
+}
+
+button:nth-child(16) {
+    grid-column: span 2;
+}
+
+button:hover {
+    backdrop-filter: blur(5.5px);
+    background: rgba(199, 199, 199, 0.75);
+}
+
+[data-operation] {
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 86, 115, 0.75);
+    font-family: inherit;
+}
+
+[data-operation]:hover {
+    backdrop-filter: blur(5.5px);
+    background: rgba(250, 22, 60, 0.75);
+}
